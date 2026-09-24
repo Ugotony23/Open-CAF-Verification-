@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Adult & Children's Social Care Case Management",
+    "description": "Statutory child protection, adult safeguarding records, vulnerable citizen care plans, and emergency social worker dispatch.",
+    "tier": "TIER_1",
+    "weight_multiplier": 3.0,
+    "is_active": true
+  },
+  {
+    "name": "Revenues, Council Tax & Housing Benefits Processing",
+    "description": "Council tax billing and collection, business rates, direct debit collection, housing benefit payments, and council tax reduction schemes.",
+    "tier": "TIER_1",
+    "weight_multiplier": 3.0,
+    "is_active": true
+  },
+  {
+    "name": "Electoral Registration & Elections Management",
+    "description": "Electoral roll management, voter ID verification, postal ballot processing, and statutory local/parliamentary election counting systems.",
+    "tier": "TIER_1",
+    "weight_multiplier": 3.0,
+    "is_active": true
+  },
+  {
+    "name": "Local Emergency Planning & Severe Weather Response",
+    "description": "Civil contingencies coordination, major incident response, flood management, severe weather response, and emergency shelter coordination.",
+    "tier": "TIER_1",
+    "weight_multiplier": 3.0,
+    "is_active": true
+  },
+  {
+    "name": "Citizen Payments & Financial Transaction Gateway",
+    "description": "PCI-DSS compliant payment gateway for resident service payments, parking permits, licensing fees, supplier BACs disbursements, and corporate banking integrations.",
+    "tier": "TIER_1",
+    "weight_multiplier": 3.0,
+    "is_active": true
+  },
+  {
+    "name": "Planning Applications & Building Control",
+    "description": "Statutory planning register, public consultation portals, building regulation compliance certificates, and spatial GIS mapping.",
+    "tier": "TIER_2",
+    "weight_multiplier": 2.0,
+    "is_active": true
+  },
+  {
+    "name": "Waste Collection & Street Cleansing Routing",
+    "description": "Domestic and commercial refuse rounds, missed bin reporting, street cleansing dispatch, fly-tipping enforcement, and recycling centre bookings.",
+    "tier": "TIER_2",
+    "weight_multiplier": 2.0,
+    "is_active": true
+  },
+  {
+    "name": "Council Housing Repairs & Tenancy Management",
+    "description": "Social housing allocation register, contractor job dispatch for emergency housing repairs, rent accounting, and tenancy enforcement.",
+    "tier": "TIER_2",
+    "weight_multiplier": 2.0,
+    "is_active": true
+  },
+  {
+    "name": "Corporate Active Directory / Microsoft 365 & Staff Payroll",
+    "description": "Central identity provider, staff email/collaboration suite, HMRC Real Time Information payroll processing, and staff expense disbursements.",
+    "tier": "TIER_2",
+    "weight_multiplier": 2.0,
+    "is_active": true
+  },
+  {
+    "name": "Council Public Website & News Portal",
+    "description": "Public-facing informational website, press releases, committee agendas and minutes, civic announcements, and councillor contact details.",
+    "tier": "TIER_3",
+    "weight_multiplier": 1.0,
+    "is_active": true
+  },
+  {
+    "name": "Leisure Centre Bookings & Library Catalogue",
+    "description": "Public library catalog search and book reservations, gym/swimming timetable bookings, and municipal event ticketing.",
+    "tier": "TIER_3",
+    "weight_multiplier": 1.0,
+    "is_active": true
+  },
+  {
+    "name": "Public Guest Wi-Fi Networks",
+    "description": "Unauthenticated or portal-authenticated public Wi-Fi access in town halls, public libraries, and community centres.",
+    "tier": "TIER_3",
+    "weight_multiplier": 1.0,
+    "is_active": true
+  }
+]

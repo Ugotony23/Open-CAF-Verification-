@@ -1,0 +1,891 @@
+{
+  "framework": "NCSC Cyber Assessment Framework",
+  "version": "4.0",
+  "objectives": [
+    {
+      "id": "A",
+      "code": "A",
+      "title": "Objective A: Managing Cyber Risk",
+      "description": "Appropriate organisational structures, policies, and processes in place to understand, assess and systematically manage cyber security risks to essential functions.",
+      "principles": [
+        {
+          "id": "A1",
+          "code": "A1",
+          "title": "Governance",
+          "description": "The organisation has appropriate governance structures in place to manage cyber security risks to essential functions.",
+          "outcomes": [
+            {
+              "id": "A1.a",
+              "code": "A1.a",
+              "title": "Board Direction",
+              "description": "The board or equivalent senior leadership directs and oversees the management of cyber risk to essential functions.",
+              "guidance_notes": "Senior leadership understands cyber risk and regularly reviews cyber posture.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "The board demonstrates active oversight of cyber risk, sets risk appetite for citizen services, and reviews quarterly reports.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "The board discusses cyber security reactively after major incidents without formal strategic risk appetite metrics.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "A1.b",
+              "code": "A1.b",
+              "title": "Roles and Responsibilities",
+              "description": "Clear roles and responsibilities are defined and allocated to appropriately skilled individuals.",
+              "guidance_notes": "A designated individual (e.g. CISO / SIRO) has formal responsibility for cyber security.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "A formally appointed CISO or cyber lead has explicit authority, budget, and resources for council-wide cyber posture.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Cyber security roles are assigned informally to general IT support without designated accountability.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "A1.c",
+              "code": "A1.c",
+              "title": "Decision-making",
+              "description": "Cyber security is integrated into organisational decision-making, including project governance and procurement.",
+              "guidance_notes": "Security gates exist for all digital procurement and architectural changes.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Cyber security risk assessments and sign-offs are mandatory gates in all IT procurement and cloud migrations.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Security advice is sought informally but projects can be deployed without formal sign-off.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "code": "A2",
+          "title": "Risk Management",
+          "description": "The organisation takes an active, risk-based approach to identifying and managing risks to essential functions.",
+          "outcomes": [
+            {
+              "id": "A2.a",
+              "code": "A2.a",
+              "title": "Risk Management Process",
+              "description": "A dynamic risk management process identifies, analyses, prioritises, and tracks cyber security risks.",
+              "guidance_notes": "Risks to essential citizen services are continually evaluated.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "A dynamic cyber risk management framework actively tracks threats and system vulnerabilities.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Risk management relies on static annual reviews without active monitoring of threat likelihood.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "A2.b",
+              "code": "A2.b",
+              "title": "Understanding Threat",
+              "description": "The organisation understands the cyber threat landscape as it applies to its essential functions.",
+              "guidance_notes": "Threat intelligence is tracked from NCSC, CiSP, and sector advisories.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Threat intelligence feeds and sector bulletins are reviewed continuously to assess threat actor capabilities against council infrastructure.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Threat awareness is generic and does not evaluate specific tactics targeting local authorities.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "A2.c",
+              "code": "A2.c",
+              "title": "Assurance",
+              "description": "The organisation gains confidence that its cyber risk management processes and controls are effective.",
+              "guidance_notes": "Third-party penetration testing and technical audits validate defenses.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Regular independent CREST/CHECK penetration tests and external audits validate control effectiveness.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Assurance is based solely on self-assessment without technical testing or independent validation.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "code": "A3",
+          "title": "Asset Management",
+          "description": "The organisation understands, documents, and manages the assets that support its essential functions.",
+          "outcomes": [
+            {
+              "id": "A3.a",
+              "code": "A3.a",
+              "title": "Asset Management",
+              "description": "Everything which plays a role in delivering essential functions is inventoried and understood.",
+              "guidance_notes": "Hardware, software, data, cloud workloads, and operational dependencies are tracked.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Automated asset discovery maintains an accurate real-time inventory of all hardware, cloud instances, and systems.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Asset registers exist in static spreadsheets with untracked shadow IT assets.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "code": "A4",
+          "title": "Supply Chain",
+          "description": "The organisation understands and manages security risks arising from its supply chains.",
+          "outcomes": [
+            {
+              "id": "A4.a",
+              "code": "A4.a",
+              "title": "Supply Chain",
+              "description": "Supply chain dependencies and risks to essential functions are understood and governed.",
+              "guidance_notes": "Key suppliers (cloud MSPs, software vendors) are risk-tiered.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "All third-party suppliers are categorized by risk tier with contractual security requirements and audit rights.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Key suppliers are known, but supply chain security relies on vendor trust without contractual validation.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "A4.b",
+              "code": "A4.b",
+              "title": "Secure Software Development and Support",
+              "description": "Security requirements are enforced for custom software and ongoing vendor software support.",
+              "guidance_notes": "Secure SDLC practices and SLA commitments for vulnerability patching.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Software vendors and internal development adhere to secure coding standards with vulnerability patching SLAs.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Software security is reviewed only when major vulnerabilities are publicly disclosed.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "code": "B",
+      "title": "Objective B: Protecting Against Cyber Attack",
+      "description": "Proportionate security measures are in place to protect networks and information systems supporting essential functions from cyber attack.",
+      "principles": [
+        {
+          "id": "B1",
+          "code": "B1",
+          "title": "Service Protection Policies and Processes",
+          "description": "The organisation defines, approves, and communicates security policies and processes.",
+          "outcomes": [
+            {
+              "id": "B1.a",
+              "code": "B1.a",
+              "title": "Policy, Process and Procedure Development",
+              "description": "Security policies and procedures are developed, documented, and reviewed annually.",
+              "guidance_notes": "Policies cover IAM, encryption, remote working, and vulnerability management.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Security policies are documented, aligned with NCSC guidelines, approved by leadership, and reviewed annually.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Policies exist but are outdated or not systematically reviewed against emerging threats.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B1.b",
+              "code": "B1.b",
+              "title": "Policy, Process and Procedure Implementation",
+              "description": "Security policies and processes are effectively implemented across the council.",
+              "guidance_notes": "Automated configuration and policy enforcement.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Policy compliance is automated and validated using technical controls and configuration management.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Policies are communicated to staff, but compliance relies on manual adherence without technical guardrails.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B2",
+          "code": "B2",
+          "title": "Identity and Access Control",
+          "description": "Access to networks, systems, and data is understood, controlled, and restricted to authorised users.",
+          "outcomes": [
+            {
+              "id": "B2.a",
+              "code": "B2.a",
+              "title": "Identity Verification, Authentication and Authorisation",
+              "description": "Users and services are uniquely identified and authenticated with strong controls.",
+              "guidance_notes": "MFA on all remote endpoints and cloud identity providers.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Phishing-resistant MFA is strictly enforced for all user accounts, remote access, and cloud portals.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "MFA is enforced on external VPN, but internal administrative portals allow single-factor login.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B2.b",
+              "code": "B2.b",
+              "title": "Device Management",
+              "description": "All user devices accessing council networks and systems are controlled and compliant.",
+              "guidance_notes": "Corporate MDM/Intune deployment with device compliance checks.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "All corporate and mobile devices are enrolled in MDM, enforcing health checks and encryption.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Unmanaged personal devices can connect to council webmail and cloud files without conditional access.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B2.c",
+              "code": "B2.c",
+              "title": "Privileged User Management",
+              "description": "Privileged accounts are strictly separated and managed under least-privilege principles.",
+              "guidance_notes": "Dedicated admin accounts and JIT elevation.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Privileged accounts are strictly separate from daily user accounts with just-in-time elevation and logging.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Staff use administrative credentials on standard email and web browsing workstations.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B2.d",
+              "code": "B2.d",
+              "title": "Identity and Access Management (IdAM)",
+              "description": "Access permissions are systematically provisioned, reviewed, and promptly revoked.",
+              "guidance_notes": "Automated offboarding and regular entitlement reviews.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Access rights are granted on least-privilege, reviewed quarterly, and revoked immediately upon leaver notification.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Offboarding is manual, leading to orphan accounts and lingering permissions.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B3",
+          "code": "B3",
+          "title": "Data Security",
+          "description": "Data at rest and in transit is protected from unauthorised access, disclosure, and modification.",
+          "outcomes": [
+            {
+              "id": "B3.a",
+              "code": "B3.a",
+              "title": "Understanding Data",
+              "description": "The organisation understands the data it processes, stores, and transmits.",
+              "guidance_notes": "Classification of sensitive citizen data.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Data classification is enforced with automated DLP identifying sensitive citizen records.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Classification guidelines exist on paper but are not applied to unstructured data repositories.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B3.b",
+              "code": "B3.b",
+              "title": "Data in Transit",
+              "description": "Data in transit is protected from interception, eavesdropping, and tampering.",
+              "guidance_notes": "TLS 1.2+ minimum, IPsec VPNs, deprecated cipher suites disabled.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Modern cryptographic protocols (TLS 1.2+) are enforced on all network communications.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "External traffic is encrypted, but legacy cleartext protocols persist internally.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B3.c",
+              "code": "B3.c",
+              "title": "Stored Data",
+              "description": "Data at rest is protected against unauthorised physical or logical access.",
+              "guidance_notes": "Full-disk encryption (BitLocker/FileVault) and encrypted database volumes.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "All laptops, databases, and server volumes enforce AES-256 encryption at rest.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Laptops are encrypted, but on-premise file shares and databases remain unencrypted.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B3.d",
+              "code": "B3.d",
+              "title": "Mobile Data",
+              "description": "Mobile devices and remote workers handle council data securely.",
+              "guidance_notes": "Remote wipe capability and device containerisation.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Mobile devices enforce encryption, secure containers, and instant remote wipe capabilities.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Mobile devices can store council files locally without containerisation or remote wipe.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B3.e",
+              "code": "B3.e",
+              "title": "Media/Equipment Sanitisation",
+              "description": "Removable media and decommissioned hardware are securely handled and sanitized.",
+              "guidance_notes": "Certified disposal standards (ADISA) and USB block policies.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Removable media is blocked by policy, and end-of-life media undergoes certified destruction.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Removable media is permitted without encryption, and disposal relies on standard recycling.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B4",
+          "code": "B4",
+          "title": "System Security",
+          "description": "Networks and information systems are designed, configured, maintained, and operated securely.",
+          "outcomes": [
+            {
+              "id": "B4.a",
+              "code": "B4.a",
+              "title": "Secure by Design",
+              "description": "Systems are architected to minimise attack surface and isolate critical functions.",
+              "guidance_notes": "Network segmentation isolating citizen databases and core workloads.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Network architecture enforces zero-trust segmentation isolating Tier 1 citizen databases.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "The internal network is largely flat, allowing lateral movement from user PCs to servers.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B4.b",
+              "code": "B4.b",
+              "title": "Secure Configuration",
+              "description": "Systems are hardened according to recognised security baselines.",
+              "guidance_notes": "CIS Benchmarks or NCSC configuration standards applied.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "CIS hardening baselines are applied automatically and audited for compliance drift.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Systems use default vendor settings with ad-hoc manual hardening.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B4.c",
+              "code": "B4.c",
+              "title": "Secure Management",
+              "description": "Administrative tools and management interfaces are isolated and hardened.",
+              "guidance_notes": "Dedicated management network and Privileged Access Workstations.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Management is performed from dedicated Privileged Access Workstations with internet isolation.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Administrators manage core infrastructure from general desktop workstations.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B4.d",
+              "code": "B4.d",
+              "title": "Vulnerability Management",
+              "description": "Vulnerabilities are discovered, prioritised, and remediated within defined SLAs.",
+              "guidance_notes": "Regular authenticated vulnerability scanning and patch SLAs.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Automated weekly vulnerability scans run with critical vulnerabilities patched within 14 days.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Patching occurs monthly without formal vulnerability scanning of internal networks.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B5",
+          "code": "B5",
+          "title": "Resilient Networks and Systems",
+          "description": "Networks and information systems are designed to withstand failures and recover rapidly.",
+          "outcomes": [
+            {
+              "id": "B5.a",
+              "code": "B5.a",
+              "title": "Resilience Preparation",
+              "description": "Resilience requirements for essential services are understood, planned, and resourced.",
+              "guidance_notes": "RTO and RPO defined for statutory council services.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Formal Recovery Time and Point Objectives (RTO/RPO) are defined and tested for all essential services.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Disaster recovery is planned informally without agreed service-specific recovery time objectives.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B5.b",
+              "code": "B5.b",
+              "title": "Design for Resilience",
+              "description": "System architecture eliminates single points of failure for essential functions.",
+              "guidance_notes": "High-availability clustering, dual circuits, and diverse power supplies.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Essential infrastructure is deployed with high availability, redundant paths, and multi-region failover.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Critical services rely on single switches, firewalls, or physical servers with no redundancy.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B5.c",
+              "code": "B5.c",
+              "title": "Backups",
+              "description": "Immutable, isolated backups are maintained and verified against ransomware attacks.",
+              "guidance_notes": "3-2-1 backup strategy with immutable offsite copies.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Immutable, air-gapped backups follow the 3-2-1 rule with automated quarterly test restores.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Backups are stored on domain-joined storage vulnerable to ransomware encryption.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B6",
+          "code": "B6",
+          "title": "Staff Awareness and Training",
+          "description": "Staff receive appropriate cyber security awareness and role-specific training.",
+          "outcomes": [
+            {
+              "id": "B6.a",
+              "code": "B6.a",
+              "title": "Cyber Security Culture",
+              "description": "A positive, supportive cyber security culture is promoted throughout the council.",
+              "guidance_notes": "Blameless incident reporting and strong security culture.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Annual mandatory training achieves >95% completion with simulated phishing and proactive reporting.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Training is delivered once at induction with no ongoing refresher awareness campaigns.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "B6.b",
+              "code": "B6.b",
+              "title": "Cyber Security Training",
+              "description": "Personnel in high-risk, IT, or leadership roles receive tailored security training.",
+              "guidance_notes": "System admins and crisis leaders receive specialised training.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Privileged admins and incident response leads complete role-specific security certifications and training.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Administrators receive generic staff training without advanced security engineering coursework.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "code": "C",
+      "title": "Objective C: Detecting Cyber Security Events",
+      "description": "Capabilities in place to detect cyber security events that could affect the delivery of essential functions.",
+      "principles": [
+        {
+          "id": "C1",
+          "code": "C1",
+          "title": "Security Monitoring",
+          "description": "Continuous monitoring is in place across network and system endpoints.",
+          "outcomes": [
+            {
+              "id": "C1.a",
+              "code": "C1.a",
+              "title": "Sources and Tools for Logging and Monitoring",
+              "description": "Logging covers all critical networks, endpoints, identity providers, and cloud workloads.",
+              "guidance_notes": "Centralized SIEM or MDR collecting telemetry.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "A centralized SIEM/MDR ingests logs across cloud tenants, domain controllers, perimeters, and EDR agents.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Logs are retained locally on individual servers without centralized aggregation or correlation.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "C1.b",
+              "code": "C1.b",
+              "title": "Securing Logs",
+              "description": "Security logs and audit records are protected against tampering and unauthorized deletion.",
+              "guidance_notes": "Immutable write-once storage for audit logs.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Logs are shipped in real-time to append-only, tamper-evident cloud storage with restricted access.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Logs are accessible to standard administrators and can be altered or erased without alerting.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "C1.c",
+              "code": "C1.c",
+              "title": "Generating Alerts",
+              "description": "Alerting logic promptly flags anomalous and malicious security events.",
+              "guidance_notes": "Rules tuned to detect credential abuse, lateral movement, and ransomware activity.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Automated correlation rules mapped to MITRE ATT&CK generate real-time high-priority alerts.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Alerting generates high false-positive noise with no active correlation of multi-stage attacks.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "C1.d",
+              "code": "C1.d",
+              "title": "Triage of Security Alerts",
+              "description": "Alerts are investigated and triaged by skilled analysts according to defined SLAs.",
+              "guidance_notes": "24/7 SOC or rapid daytime escalation paths.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "A 24/7 SOC or MDR service triages critical alerts within 15 minutes with defined escalation runbooks.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Alerts are reviewed only during business hours, leaving evenings and weekends unmonitored.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C2",
+          "code": "C2",
+          "title": "Proactive Security Event Discovery",
+          "description": "Active discovery capabilities identify anomalies, hidden compromises, and indicators of compromise.",
+          "outcomes": [
+            {
+              "id": "C2.a",
+              "code": "C2.a",
+              "title": "Threat Hunting and Discovery",
+              "description": "Proactive hunting and automated discovery tools identify unknown or anomalous activity.",
+              "guidance_notes": "Proactive threat hunting and indicators of compromise matching.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Threat hunters and EDR telemetry actively sweep the environment for stealthy adversaries and IOCs.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Detection is purely reactive to automated signature alerts without proactive threat hunting.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "code": "D",
+      "title": "Objective D: Minimising the Impact of Cyber Security Incidents",
+      "description": "Capabilities in place to respond effectively to cyber security incidents and restore essential functions.",
+      "principles": [
+        {
+          "id": "D1",
+          "code": "D1",
+          "title": "Response and Recovery Planning",
+          "description": "Documented incident response and disaster recovery plans are prepared and regularly tested.",
+          "outcomes": [
+            {
+              "id": "D1.a",
+              "code": "D1.a",
+              "title": "Response Plan",
+              "description": "An Incident Response Plan defines escalation paths, communication channels, and statutory duties.",
+              "guidance_notes": "Includes ICO 72-hour notification, MHCLG/NCSC escalation, and crisis communications.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "A comprehensive Cyber Incident Response Plan details roles, out-of-band comms, and statutory reporting.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "A generic disaster recovery document exists without specific playbooks for ransomware or data breaches.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "D1.b",
+              "code": "D1.b",
+              "title": "Response and Recovery Capability",
+              "description": "The organisation possesses the resources, tools, and third-party support to execute response plans.",
+              "guidance_notes": "Retained emergency incident response provider and forensic tooling.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "An emergency incident response retainer with a CREST-accredited DFIR firm is active with SLA response.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "The council relies entirely on internal IT staff without external specialist DFIR retainer support.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "D1.c",
+              "code": "D1.c",
+              "title": "Testing and Exercising",
+              "description": "Incident response and disaster recovery plans are regularly tested through realistic exercises.",
+              "guidance_notes": "Annual tabletop exercises with executive and operational teams.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Simulated cyber crisis tabletop exercises involving the Chief Executive and IT team occur at least annually.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Technical backups are tested, but leadership has never participated in a simulated cyber tabletop.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D2",
+          "code": "D2",
+          "title": "Improvements",
+          "description": "Lessons learned from incidents and exercises feed back into improving cyber resilience.",
+          "outcomes": [
+            {
+              "id": "D2.a",
+              "code": "D2.a",
+              "title": "Post Incident Analysis",
+              "description": "Root cause analyses of incidents and exercises are documented and reviewed.",
+              "guidance_notes": "Formal post-incident review (PIR) meetings and reports.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "Post-incident reviews are mandatory following any major event, producing root-cause analysis and board reports.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Lessons are discussed informally within IT without documented root-cause findings or executive reporting.",
+                  "sort_order": 2
+                }
+              ]
+            },
+            {
+              "id": "D2.b",
+              "code": "D2.b",
+              "title": "Using Incidents to Drive Improvements",
+              "description": "Remediation actions identified from incidents are tracked, funded, and implemented.",
+              "guidance_notes": "PIR action items assigned to named owners with agreed target dates.",
+              "igps": [
+                {
+                  "level": "ACHIEVED",
+                  "description": "PIR recommendations are converted into funded remediation tasks tracked until closure on the risk register.",
+                  "sort_order": 1
+                },
+                {
+                  "level": "PARTIALLY_ACHIEVED",
+                  "description": "Remediation actions are identified, but implementation stalls due to lack of assigned budget or ownership.",
+                  "sort_order": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

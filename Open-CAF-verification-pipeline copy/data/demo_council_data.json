@@ -1,0 +1,617 @@
+{
+  "council": {
+    "name": "Borsetshire District Council",
+    "slug": "borsetshire",
+    "tier": "District Council",
+    "region": "West Midlands",
+    "contact_name": "Marcus Vance",
+    "contact_email": "ciso@borsetshire.gov.uk"
+  },
+  "assessment": {
+    "title": "Borsetshire Cyber Resilience Assessment 2025/26",
+    "scope_description": "Comprehensive NCSC CAF v4.0 statutory cyber resilience audit across all tier 1 citizen services, corporate active directory, and operational networks.",
+    "target_maturity": "ACHIEVED"
+  },
+  "evidence_artifacts": [
+    {
+      "title": "Borsetshire Information Security Policy v4.2",
+      "filename": "borsetshire_infosec_policy_2024.pdf",
+      "category": "POLICY",
+      "validity_months": 12,
+      "linked_outcome_ids": ["A1.a", "A1.b", "A2.a", "B2.b"]
+    },
+    {
+      "title": "CrowdStrike Falcon EDR Coverage & Sensor Health Report",
+      "filename": "crowdstrike_edr_telemetry_report.pdf",
+      "category": "VULNERABILITY_SCAN",
+      "validity_months": 3,
+      "linked_outcome_ids": ["B4.a", "B4.c", "C1.a", "C1.b"]
+    },
+    {
+      "title": "CREST Accredited External Infrastructure Penetration Test - Q3 2024",
+      "filename": "crest_infrastructure_pentest_q3_2024.pdf",
+      "category": "PENTEST_REPORT",
+      "validity_months": 12,
+      "linked_outcome_ids": ["B1.b", "B2.a", "B4.a"]
+    },
+    {
+      "title": "Air-Gapped & Immutable Backup Disaster Recovery Validation",
+      "filename": "veeam_disaster_recovery_plan_2024.pdf",
+      "category": "INCIDENT_DRILL",
+      "validity_months": 6,
+      "linked_outcome_ids": ["D1.a", "D1.b"]
+    },
+    {
+      "title": "Staff Cyber Hygiene & Phishing Simulation Metrics Q4 2024",
+      "filename": "knowbe4_phishing_metrics_q4_2024.pdf",
+      "category": "POLICY",
+      "validity_months": 3,
+      "linked_outcome_ids": ["A3.a", "B3.a"]
+    },
+    {
+      "title": "Vulnerability Management & Patching Standard Operating Procedure",
+      "filename": "vulnerability_management_sop.pdf",
+      "category": "POLICY",
+      "validity_months": 12,
+      "linked_outcome_ids": ["B5.a", "B5.b", "B5.c"]
+    },
+    {
+      "title": "Active Directory & Microsoft Entra Conditional Access Audit",
+      "filename": "entra_id_conditional_access_audit.pdf",
+      "category": "VULNERABILITY_SCAN",
+      "validity_months": 6,
+      "linked_outcome_ids": ["B2.a", "B2.c", "B2.d"]
+    },
+    {
+      "title": "Borsetshire Major Cyber Incident Response Plan v3.0",
+      "filename": "major_cyber_incident_response_plan_v3.pdf",
+      "category": "INCIDENT_DRILL",
+      "validity_months": 12,
+      "linked_outcome_ids": ["C2.a", "D1.c", "D2.a"]
+    }
+  ],
+  "outcome_evaluations": {
+    "A1.a": {
+      "status": "ACHIEVED",
+      "rationale": "Cabinet and Chief Executive receive quarterly cyber resilience posture briefings with formal risk appetite thresholds set for statutory public services.",
+      "checked_igps": [1]
+    },
+    "A1.b": {
+      "status": "ACHIEVED",
+      "rationale": "Formally appointed Head of Cyber Security & SIRO with direct reporting access to Section 151 Officer and Corporate Management Team.",
+      "checked_igps": [1]
+    },
+    "A1.c": {
+      "status": "ACHIEVED",
+      "rationale": "Risk management framework aligns with ISO 27001:2022 and NCSC CAF guidance, refreshed semi-annually.",
+      "checked_igps": [1]
+    },
+    "A2.a": {
+      "status": "ACHIEVED",
+      "rationale": "Comprehensive asset register maintained in ServiceNow CMDB covering all council end-user devices, hypervisors, and SaaS services.",
+      "checked_igps": [1]
+    },
+    "A2.b": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Network topologies mapped for main datacenter and civic offices, but remote depot networks and IoT traffic lack real-time visibility.",
+      "checked_igps": [2]
+    },
+    "A2.c": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Council dependencies on external cloud vendors documented, but downstream sub-processor risk audits are inconsistent.",
+      "checked_igps": [2]
+    },
+    "A3.a": {
+      "status": "ACHIEVED",
+      "rationale": "Annual mandatory cyber awareness modules for all 2,400 council employees with 96.4% completion rate.",
+      "checked_igps": [1]
+    },
+    "A4.a": {
+      "status": "ACHIEVED",
+      "rationale": "Supply chain security requirements incorporated into all procurement tender documentation and contracts over £50k.",
+      "checked_igps": [1]
+    },
+    "A4.b": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "High-risk SaaS suppliers are vetted during onboarding, but continuous monitoring of supplier vulnerability disclosures is informal.",
+      "checked_igps": [2]
+    },
+    "B1.a": {
+      "status": "NOT_ACHIEVED",
+      "rationale": "Critical Single Point of Failure: The Electoral Registration AD forest shares an unisolated bridge with the legacy corporate domain, presenting a direct lateral traversal route.",
+      "checked_igps": [3]
+    },
+    "B1.b": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Security architecture reviewed during capital project design, but technical debt exemptions have accumulated without clear retirement dates.",
+      "checked_igps": [2]
+    },
+    "B2.a": {
+      "status": "NOT_ACHIEVED",
+      "rationale": "Legacy Remote Desktop Gateway used by Adult Social Care out-of-hours social workers lacks modern FIDO2/MFA conditional access enforcement.",
+      "checked_igps": [3]
+    },
+    "B2.b": {
+      "status": "ACHIEVED",
+      "rationale": "Strict identity lifecycle with automated joiners, movers, leavers (JML) integration between HR payroll and Entra ID.",
+      "checked_igps": [1]
+    },
+    "B2.c": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Privileged access management (PAM) deployed for domain admins, but local administrator accounts on civic building IoT devices remain static.",
+      "checked_igps": [2]
+    },
+    "B2.d": {
+      "status": "ACHIEVED",
+      "rationale": "Granular role-based access control applied across statutory revenues, housing benefit, and council tax databases.",
+      "checked_igps": [1]
+    },
+    "B3.a": {
+      "status": "ACHIEVED",
+      "rationale": "Comprehensive acceptable use policy and annual security pledge signed by all staff and elected members.",
+      "checked_igps": [1]
+    },
+    "B3.b": {
+      "status": "ACHIEVED",
+      "rationale": "Physical perimeter security, RFID keycard badges, and CCTV logging active at County Hall datacenter.",
+      "checked_igps": [1]
+    },
+    "B3.c": {
+      "status": "ACHIEVED",
+      "rationale": "All staff laptops enforced with BitLocker AES-256 full disk encryption and USB storage device restriction.",
+      "checked_igps": [1]
+    },
+    "B3.d": {
+      "status": "ACHIEVED",
+      "rationale": "All mobile devices enrolled in Microsoft Intune MDM with biometric containerization and remote wipe capability.",
+      "checked_igps": [1]
+    },
+    "B3.e": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Secure disposal contract in place with certified data destruction, but historical paper files in archived storage await shredding audit.",
+      "checked_igps": [2]
+    },
+    "B4.a": {
+      "status": "NOT_ACHIEVED",
+      "rationale": "Vulnerable network segmentation: Adult Social Care SQL databases share a flat Layer-2 VLAN with building management controllers and civic hall HVAC.",
+      "checked_igps": [3]
+    },
+    "B4.b": {
+      "status": "ACHIEVED",
+      "rationale": "Next-generation Palo Alto firewalls deployed at all perimeter edges with TLS 1.3 decryption and deep packet inspection.",
+      "checked_igps": [1]
+    },
+    "B4.c": {
+      "status": "ACHIEVED",
+      "rationale": "CrowdStrike Falcon EDR active on 100% of Windows and Linux servers with automated endpoint isolation.",
+      "checked_igps": [1]
+    },
+    "B4.d": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Email protection via Microsoft Defender for Office 365, but DMARC policy is currently set to 'none' rather than 'reject'.",
+      "checked_igps": [2]
+    },
+    "B5.a": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Operating system security patches applied monthly, but third-party application patching for specialized housing software lags up to 60 days.",
+      "checked_igps": [2]
+    },
+    "B5.b": {
+      "status": "ACHIEVED",
+      "rationale": "Weekly automated Qualys vulnerability scans conducted across all internal and external council subnets.",
+      "checked_igps": [1]
+    },
+    "B5.c": {
+      "status": "ACHIEVED",
+      "rationale": "Formal emergency patch management protocol tested and executed within 24 hours for actively exploited CISA KEV vulnerabilities.",
+      "checked_igps": [1]
+    },
+    "B6.a": {
+      "status": "ACHIEVED",
+      "rationale": "Official classification scheme (OFFICIAL / OFFICIAL-SENSITIVE) enforced across Microsoft Purview labels.",
+      "checked_igps": [1]
+    },
+    "B6.b": {
+      "status": "ACHIEVED",
+      "rationale": "All citizen data transmitted externally is protected with TLS 1.3 or PGP-encrypted SFTP tunnels.",
+      "checked_igps": [1]
+    },
+    "C1.a": {
+      "status": "ACHIEVED",
+      "rationale": "Centralized Microsoft Sentinel SIEM ingesting syslog from all firewalls, domain controllers, and EDR agents.",
+      "checked_igps": [1]
+    },
+    "C1.b": {
+      "status": "ACHIEVED",
+      "rationale": "24/7/365 Managed Security Operations Centre (SOC) monitoring active with 15-minute mean time to alert.",
+      "checked_igps": [1]
+    },
+    "C1.c": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Log retention set to 180 days in hot storage, but immutable cold storage archival for forensic readiness is under-provisioned.",
+      "checked_igps": [2]
+    },
+    "C1.d": {
+      "status": "ACHIEVED",
+      "rationale": "Automated threat intelligence feeds from NCSC Early Warning and CISP ingested directly into SIEM.",
+      "checked_igps": [1]
+    },
+    "C2.a": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "CSIRT incident playbooks exist for ransomware and credential stuffing, but lack specific guidance for operational technology (OT) incidents.",
+      "checked_igps": [2]
+    },
+    "D1.a": {
+      "status": "NOT_ACHIEVED",
+      "rationale": "Critical Resiliency Deficit: Revenues & Housing Benefits database backups are synchronized to a secondary SAN on the same domain without air-gapped immutable storage.",
+      "checked_igps": [3]
+    },
+    "D1.b": {
+      "status": "PARTIALLY_ACHIEVED",
+      "rationale": "Disaster recovery tabletop exercises conducted annually, but full bare-metal restore drills for Revenues systems have not been rehearsed in 18 months.",
+      "checked_igps": [2]
+    },
+    "D1.c": {
+      "status": "ACHIEVED",
+      "rationale": "Alternative cloud communications channels (Signal & secondary M365 tenant) configured for crisis response command team.",
+      "checked_igps": [1]
+    },
+    "D2.a": {
+      "status": "ACHIEVED",
+      "rationale": "Post-incident review policy mandates blameless post-mortems and remediation tracking within 14 days of major incidents.",
+      "checked_igps": [1]
+    },
+    "D2.b": {
+      "status": "ACHIEVED",
+      "rationale": "Lessons learned feeds directly into council enterprise risk register and annual cyber training curriculum.",
+      "checked_igps": [1]
+    }
+  },
+  "identified_gaps": [
+    {
+      "outcome_id": "B2.a",
+      "title": "Legacy Remote Access Gateway Lacking MFA for Social Care",
+      "description": "Out-of-hours social workers access adult case notes via an unpatched RD Gateway that supports single-factor password authentication without FIDO2 or Conditional Access.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "CRITICAL",
+      "service_name": "Adult & Children's Social Care Case Management",
+      "service_tier": "TIER_1",
+      "threat_likelihood": "HIGH",
+      "priority_score": 92.5,
+      "risk_level": "CRITICAL",
+      "sla_days": 14
+    },
+    {
+      "outcome_id": "B4.a",
+      "title": "Unsegmented Adult Social Care DB on Shared Civic Network",
+      "description": "Statutory child protection SQL server resides in a flat network segment shared with building management system (BMS) controllers and public kiosk terminals.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "CRITICAL",
+      "service_name": "Adult & Children's Social Care Case Management",
+      "service_tier": "TIER_1",
+      "threat_likelihood": "HIGH",
+      "priority_score": 90.0,
+      "risk_level": "CRITICAL",
+      "sla_days": 14
+    },
+    {
+      "outcome_id": "D1.a",
+      "title": "Missing Immutable Air-Gapped Backups for Revenues & Housing Benefits",
+      "description": "Revenues and Council Tax SQL databases rely on co-located SAN snapshots accessible via domain admin credentials, vulnerable to ransomware wiper attacks.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "CRITICAL",
+      "service_name": "Revenues, Council Tax & Housing Benefits Processing",
+      "service_tier": "TIER_1",
+      "threat_likelihood": "HIGH",
+      "priority_score": 88.0,
+      "risk_level": "CRITICAL",
+      "sla_days": 14
+    },
+    {
+      "outcome_id": "B1.a",
+      "title": "Single Point of Failure in Electoral Register Active Directory Domain",
+      "description": "Electoral roll server trusts legacy corporate domain without isolation, enabling complete compromise of statutory election systems during a corporate breach.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "CRITICAL",
+      "service_name": "Electoral Registration & Elections Management",
+      "service_tier": "TIER_1",
+      "threat_likelihood": "MEDIUM",
+      "priority_score": 81.0,
+      "risk_level": "CRITICAL",
+      "sla_days": 14
+    },
+    {
+      "outcome_id": "B4.d",
+      "title": "DMARC Configuration Set to 'None' for Citizen Communications",
+      "description": "Council email domain lacks DMARC 'reject' enforcement, enabling threat actors to spoof council official communications regarding council tax and housing benefits.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "HIGH",
+      "service_name": "Citizen Payments & Financial Transaction Gateway",
+      "service_tier": "TIER_1",
+      "threat_likelihood": "HIGH",
+      "priority_score": 72.0,
+      "risk_level": "HIGH",
+      "sla_days": 45
+    },
+    {
+      "outcome_id": "B5.a",
+      "title": "Third-Party Specialized Housing Software Lacks Patch SLAs",
+      "description": "Northgate Housing Repairs application running on legacy Windows 2016 VM with 60-day lag on critical vendor security patches.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "HIGH",
+      "service_name": "Council Housing Repairs & Tenancy Management",
+      "service_tier": "TIER_2",
+      "threat_likelihood": "HIGH",
+      "priority_score": 68.0,
+      "risk_level": "HIGH",
+      "sla_days": 45
+    },
+    {
+      "outcome_id": "A2.b",
+      "title": "Unmapped Remote Depot Subnets in Waste Cleansing Operations",
+      "description": "Cleansing depot IoT routing gateways operate on static unmonitored subnets outside central SIEM visibility.",
+      "gap_type": "EVIDENTIAL_GAP",
+      "severity": "MEDIUM",
+      "service_name": "Waste Collection & Street Cleansing Routing",
+      "service_tier": "TIER_2",
+      "threat_likelihood": "MEDIUM",
+      "priority_score": 46.0,
+      "risk_level": "MEDIUM",
+      "sla_days": 90
+    },
+    {
+      "outcome_id": "B2.c",
+      "title": "Static Passwords on Civic Centre Smart Metering IoT Devices",
+      "description": "Council premises energy management sensors use shared static administrative credentials across 14 council properties.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "MEDIUM",
+      "service_name": "Corporate Active Directory / Microsoft 365 & Staff Payroll",
+      "service_tier": "TIER_2",
+      "threat_likelihood": "MEDIUM",
+      "priority_score": 44.0,
+      "risk_level": "MEDIUM",
+      "sla_days": 90
+    },
+    {
+      "outcome_id": "C1.c",
+      "title": "Inadequate Cold Storage Forensics Log Retention",
+      "description": "Audit logs for Planning Application web portals are retained for only 90 days instead of statutory 12-month compliance window.",
+      "gap_type": "EVIDENTIAL_GAP",
+      "severity": "MEDIUM",
+      "service_name": "Planning Applications & Building Control",
+      "service_tier": "TIER_2",
+      "threat_likelihood": "LOW",
+      "priority_score": 38.0,
+      "risk_level": "MEDIUM",
+      "sla_days": 90
+    },
+    {
+      "outcome_id": "A4.b",
+      "title": "SaaS Booking Portal Vendor Lacks Ongoing Threat Auditing",
+      "description": "Leisure centre bookings portal hosted by third party without annual SOC2 Type II or ISO 27001 certificate verification.",
+      "gap_type": "EVIDENTIAL_GAP",
+      "severity": "LOW",
+      "service_name": "Leisure Centre Bookings & Library Catalogue",
+      "service_tier": "TIER_3",
+      "threat_likelihood": "LOW",
+      "priority_score": 22.0,
+      "risk_level": "LOW",
+      "sla_days": 180
+    },
+    {
+      "outcome_id": "B3.e",
+      "title": "Archived Physical Paper Records Awaiting Shredding Audit",
+      "description": "Historical housing paper applications held in County Hall basement without formal destruction sign-off.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "LOW",
+      "service_name": "Council Public Website & News Portal",
+      "service_tier": "TIER_3",
+      "threat_likelihood": "LOW",
+      "priority_score": 18.0,
+      "risk_level": "LOW",
+      "sla_days": 180
+    },
+    {
+      "outcome_id": "C2.a",
+      "title": "Missing Operational Technology Incident Playbook",
+      "description": "Council incident playbooks cover ransomware and data breach, but lack steps for building automation lockouts or smart lighting compromises.",
+      "gap_type": "CONTROL_DEFICIT",
+      "severity": "LOW",
+      "service_name": "Public Guest Wi-Fi Networks",
+      "service_tier": "TIER_3",
+      "threat_likelihood": "LOW",
+      "priority_score": 16.0,
+      "risk_level": "LOW",
+      "sla_days": 180
+    }
+  ],
+  "remediation_tasks": [
+    {
+      "title": "Decommission Legacy RD Gateway and Enforce Entra ID MFA",
+      "outcome_id": "B2.a",
+      "priority": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "assigned_owner_name": "Eleanor Rigby",
+      "assigned_owner_email": "eleanor.rigby@borsetshire.gov.uk",
+      "estimated_effort_hours": 80.0,
+      "estimated_cost_gbp": 14500.0,
+      "target_completion_date": "2025-11-15",
+      "description": "Migrate all Adult Social Care out-of-hours workers to Azure App Proxy with Conditional Access and FIDO2 passwordless keys.",
+      "technical_steps": [
+        "Audit active RD Gateway sessions and user accounts",
+        "Deploy Azure Application Proxy connectors on internal DMZ",
+        "Configure Entra ID Conditional Access requiring MFA and compliant council Intune devices",
+        "Distribute YubiKeys to 35 on-call social workers",
+        "Decommission legacy gateway server and revoke public DNS entry"
+      ],
+      "external_ticket_id": "CYBER-104"
+    },
+    {
+      "title": "Microsegment Social Care SQL Database from Building Management VLAN",
+      "outcome_id": "B4.a",
+      "priority": "CRITICAL",
+      "status": "IN_PROGRESS",
+      "assigned_owner_name": "Dave Grohl",
+      "assigned_owner_email": "dave.grohl@borsetshire.gov.uk",
+      "estimated_effort_hours": 120.0,
+      "estimated_cost_gbp": 22000.0,
+      "target_completion_date": "2025-11-30",
+      "description": "Deploy Cisco ACI / Palo Alto microsegmentation rules isolating statutory social care case databases into dedicated private VRF with strict stateful inspection.",
+      "technical_steps": [
+        "Map all SQL inbound connections from case management application servers",
+        "Create dedicated secure VRF 'Tier1-SocialCare-Core'",
+        "Configure firewall access control lists (ACL) blocking all IoT/BMS ingress",
+        "Execute automated port scan validation from civic network segment"
+      ],
+      "external_ticket_id": "CYBER-105"
+    },
+    {
+      "title": "Implement AWS S3 Object Lock Air-Gapped Immutable Backups",
+      "outcome_id": "D1.a",
+      "priority": "CRITICAL",
+      "status": "BACKLOG",
+      "assigned_owner_name": "Fiona Apple",
+      "assigned_owner_email": "fiona.apple@borsetshire.gov.uk",
+      "estimated_effort_hours": 100.0,
+      "estimated_cost_gbp": 38000.0,
+      "target_completion_date": "2025-12-15",
+      "description": "Provision AWS London (eu-west-2) S3 bucket with strict Object Lock in Compliance Mode for Revenues & Housing Benefits SQL backups.",
+      "technical_steps": [
+        "Procure AWS GovCloud account with isolated root account credentials in physical safe",
+        "Configure Veeam Cloud Connect repository with S3 Object Lock 30-day retention",
+        "Conduct full restore simulation of Council Tax SQL database into isolated sandbox",
+        "Sign off section 151 officer compliance assurance certificate"
+      ],
+      "external_ticket_id": "CYBER-106"
+    },
+    {
+      "title": "Establish Dedicated Air-Gapped Forest for Electoral Management",
+      "outcome_id": "B1.a",
+      "priority": "CRITICAL",
+      "status": "BACKLOG",
+      "assigned_owner_name": "Eleanor Rigby",
+      "assigned_owner_email": "eleanor.rigby@borsetshire.gov.uk",
+      "estimated_effort_hours": 95.0,
+      "estimated_cost_gbp": 19500.0,
+      "target_completion_date": "2026-01-20",
+      "description": "Sever bilateral forest trust and isolate Electoral Services into a hardened standalone Active Directory domain prior to local elections.",
+      "technical_steps": [
+        "Provision two hardened domain controllers in dedicated VLAN",
+        "Migrate electoral registration workstations to new forest with PAM",
+        "Sever legacy domain trusts and enforce Kerberos armoring",
+        "Conduct vulnerability validation and penetration test"
+      ],
+      "external_ticket_id": "CYBER-107"
+    },
+    {
+      "title": "Enforce DMARC Reject Policy on borsetshire.gov.uk",
+      "outcome_id": "B4.d",
+      "priority": "HIGH",
+      "status": "IN_REVIEW",
+      "assigned_owner_name": "Dave Grohl",
+      "assigned_owner_email": "dave.grohl@borsetshire.gov.uk",
+      "estimated_effort_hours": 40.0,
+      "estimated_cost_gbp": 3500.0,
+      "target_completion_date": "2025-10-31",
+      "description": "Transition DMARC policy from 'p=none' to 'p=reject' across all council public domains and citizen notifications.",
+      "technical_steps": [
+        "Analyze Valimail DMARC reporting for 30 days",
+        "Align SPF and DKIM keys for third-party council mailing tools (GovDelivery, Civica)",
+        "Update public DNS records to 'v=DMARC1; p=reject; pct=100'",
+        "Verify delivery with NCSC Mail Check service"
+      ],
+      "external_ticket_id": "CYBER-108"
+    },
+    {
+      "title": "Upgrade Northgate Housing Management Application Server",
+      "outcome_id": "B5.a",
+      "priority": "HIGH",
+      "status": "IN_PROGRESS",
+      "assigned_owner_name": "Marcus Vance",
+      "assigned_owner_email": "marcus.vance@borsetshire.gov.uk",
+      "estimated_effort_hours": 65.0,
+      "estimated_cost_gbp": 12000.0,
+      "target_completion_date": "2025-12-05",
+      "description": "Migrate Northgate Housing from end-of-life Windows Server 2016 to Windows Server 2022 with automated patch maintenance schedule.",
+      "technical_steps": [
+        "Provision new Server 2022 VM in hypervisor cluster",
+        "Install latest vendor application build with vendor professional services",
+        "Migrate database schema and execute user acceptance testing",
+        "Decommission legacy 2016 instance"
+      ],
+      "external_ticket_id": "CYBER-109"
+    },
+    {
+      "title": "Deploy Azure Log Analytics Dedicated 365-Day Cold Workspace",
+      "outcome_id": "C1.c",
+      "priority": "MEDIUM",
+      "status": "COMPLETED",
+      "assigned_owner_name": "Fiona Apple",
+      "assigned_owner_email": "fiona.apple@borsetshire.gov.uk",
+      "estimated_effort_hours": 30.0,
+      "estimated_cost_gbp": 4800.0,
+      "target_completion_date": "2025-09-15",
+      "description": "Configure long-term archive tier in Azure Log Analytics for statutory 365-day security incident forensic retention.",
+      "technical_steps": [
+        "Provision Azure Log Analytics workspace with Archive Tier enabled",
+        "Set retention policy to 365 days across all security event tables",
+        "Validate cost model with Section 151 finance lead"
+      ],
+      "external_ticket_id": "CYBER-110"
+    },
+    {
+      "title": "Rotate IoT Administrative Credentials and Deploy LAPS",
+      "outcome_id": "B2.c",
+      "priority": "MEDIUM",
+      "status": "IN_PROGRESS",
+      "assigned_owner_name": "Dave Grohl",
+      "assigned_owner_email": "dave.grohl@borsetshire.gov.uk",
+      "estimated_effort_hours": 45.0,
+      "estimated_cost_gbp": 5200.0,
+      "target_completion_date": "2025-11-20",
+      "description": "Implement Windows LAPS (Local Administrator Password Solution) and randomized credentials on all civic premises IoT endpoints.",
+      "technical_steps": [
+        "Install Entra LAPS client extension across all civic endpoint devices",
+        "Rotate legacy shared passwords to 24-character random strings",
+        "Restrict retrieval permissions to SIRO and On-Call Lead"
+      ],
+      "external_ticket_id": "CYBER-111"
+    },
+    {
+      "title": "Establish Continuous Third-Party Risk Monitoring for SaaS Portals",
+      "outcome_id": "A4.b",
+      "priority": "LOW",
+      "status": "BACKLOG",
+      "assigned_owner_name": "Marcus Vance",
+      "assigned_owner_email": "marcus.vance@borsetshire.gov.uk",
+      "estimated_effort_hours": 25.0,
+      "estimated_cost_gbp": 6000.0,
+      "target_completion_date": "2026-02-28",
+      "description": "Subscribe to SecurityScorecard or Panorays for automated continuous monitoring of council leisure and library SaaS suppliers.",
+      "technical_steps": [
+        "Procure Crown Commercial Service G-Cloud software licenses",
+        "Upload roster of 42 council digital suppliers",
+        "Configure automated threshold alerts for supplier rating drops below 'B'"
+      ],
+      "external_ticket_id": "CYBER-112"
+    },
+    {
+      "title": "Develop and Exercise Operational Technology (OT) Cyber Playbook",
+      "outcome_id": "C2.a",
+      "priority": "LOW",
+      "status": "BACKLOG",
+      "assigned_owner_name": "Eleanor Rigby",
+      "assigned_owner_email": "eleanor.rigby@borsetshire.gov.uk",
+      "estimated_effort_hours": 35.0,
+      "estimated_cost_gbp": 8500.0,
+      "target_completion_date": "2026-03-31",
+      "description": "Author incident response procedures for smart building systems, traffic CCTV, and public guest Wi-Fi network compromises.",
+      "technical_steps": [
+        "Consult with council facilities management and highway engineering teams",
+        "Draft step-by-step containment protocols for building management systems",
+        "Facilitate desktop tabletop exercise with council emergency planning unit"
+      ],
+      "external_ticket_id": "CYBER-113"
+    }
+  ]
+}
